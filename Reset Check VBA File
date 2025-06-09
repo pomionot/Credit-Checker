@@ -1,0 +1,14 @@
+Sub リセット()
+
+    Dim ws As Worksheet
+    Set ws = Worksheets("授業一覧")
+    
+    Dim 最終行 As Long
+    最終行 = ws.Cells(ws.Rows.Count, 6).End(xlUp).Row ' F列
+
+    Dim i As Long
+    For i = 2 To 最終行
+        ws.Cells(i, 6).Value = False
+    Next i
+
+End Sub
